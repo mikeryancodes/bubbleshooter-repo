@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Bubble Shooter!
+    </title>
+    <style>
+      html, body, canvas {
+        padding: 0px;
+        margin: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas></canvas>
+
+    <script src="circle.js"></script>
+    <script src="keymaster.js"></script>
+    <script src="projectile.js"></script>
+    <script src="launcher.js"></script>
+    <script src="meter.js"></script>
+    <script src="levels.js"></script>
+    <script src="game.js"></script>
+    <script>
+      var canvasEl = document.getElementsByTagName("canvas")[0];
+      canvasEl.height = window.innerHeight;
+      canvasEl.width = window.innerWidth;
+      var currentGame = new Snood.Game(
+        canvasEl.width,
+        canvasEl.height
+      ).start(canvasEl);
+    </script>
+  </body>
+</html>
